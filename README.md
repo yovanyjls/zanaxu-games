@@ -10,15 +10,20 @@ Lista de juegos de Zanaxú que muestra la pantalla **"Más juegos"** dentro de c
 Los juegos la leen de `https://yovanyjls.github.io/zanaxu-games/games.json`. Cada juego omite su propio paquete, y si no
 hay internet muestra la última lista guardada.
 
-## Publicarla la primera vez
-1. En GitHub, crea el repositorio **público** `zanaxu-games` en la cuenta `yovanyjls`. Hazlo vacío, sin README.
-2. Sube los archivos de esta carpeta con **Add file → Upload files**: arrastra `games.json`, `README.md` y la carpeta `icons`.
-3. En **Settings → Pages**, elige "Deploy from a branch", rama `main` y carpeta `/ (root)`, y guarda.
-4. En 1-2 minutos debe abrir https://yovanyjls.github.io/zanaxu-games/games.json.
+Copia local (repositorio git conectado a `https://github.com/yovanyjls/zanaxu-games`):
+`C:\YJLS\Workspace\AndroidStudioProjects\Apps\GitHubPages\zanaxu-games`.
+- Los commits usan `yovany.jls@gmail.com`, configurado solo en este repositorio.
+- Las credenciales son las de Git Credential Manager de Windows.
 
-## Agregar un juego nuevo
+## Agregar un juego (cuando ya esté publicado en Play Store)
 ```
-python C:/YJLS/Workspace/AndroidStudioProjects/Apps/Scripts/mas_juegos/agregar_juego.py com.zanaxu.<nombre> "Nombre" C:/YJLS/Workspace/AndroidStudioProjects/Apps/Imagenes/<Proyecto>/icon.png
+python C:/YJLS/Workspace/AndroidStudioProjects/Apps/Scripts/mas_juegos/agregar_juego.py com.zanaxu.<nombre> "Nombre" C:/YJLS/Workspace/AndroidStudioProjects/Apps/Imagenes/<Proyecto>/icon.png --publicar
 ```
-Después sube `games.json` y el ícono nuevo al repositorio. Los juegos ya publicados lo muestran sin actualizarse.
-Agrégalo cuando el juego ya esté **publicado** en Play Store, para que el enlace no lleve a una ficha que todavía no existe.
+Con `--publicar`, el script hace todo esto:
+- trae lo último del repositorio;
+- actualiza `games.json` y el ícono;
+- hace commit y push;
+- espera a que GitHub Pages muestre el juego.
+
+Si el remoto no es `zanaxu-games` o hay cambios sin subir, se detiene. Sin `--publicar`, solo edita los archivos locales.
+Los juegos ya publicados muestran el juego nuevo sin actualizarse.
