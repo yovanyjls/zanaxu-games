@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "games": [
+    {
+      "package": "com.zanaxu.novastrike",
+      "name": "Nova Strike",
+      "icon": "icons/com.zanaxu.novastrike.png"
+    },
+    {
+      "package": "com.zanaxu.mysticblocks",
+      "name": "Mystic Blocks",
+      "icon": "icons/com.zanaxu.mysticblocks.png"
+    }
+  ]
+}
