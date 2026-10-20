@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zanaxú Games</title>
+  <meta name="description" content="Free casual games for Android by Zanaxú.">
+  <style>
+    :root {
+      --bg1: #120b3a; --bg2: #2a1b6e; --card: rgba(255, 255, 255, 0.08);
+      --border: rgba(95, 231, 255, 0.35); --text: #f4f2ff; --muted: #b9b3e0; --gold: #ffd54a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(ellipse at top, var(--bg2), var(--bg1) 70%) fixed;
+      display: flex; flex-direction: column; align-items: center;
+    }
+    header { text-align: center; padding: 56px 16px 24px; }
+    h1 { margin: 0; font-size: clamp(2rem, 6vw, 3rem); letter-spacing: 0.04em; color: var(--gold); }
+    header p { margin: 10px 0 0; color: var(--muted); font-size: 1.05rem; }
+    main {
+      width: 100%; max-width: 880px; padding: 16px;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 18px;
+    }
+    a.game {
+      display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 18px 12px;
+      background: var(--card); border: 1px solid var(--border); border-radius: 18px;
+      color: var(--text); text-decoration: none; transition: transform 0.15s, border-color 0.15s;
+    }
+    a.game:hover, a.game:focus-visible { transform: translateY(-3px); border-color: var(--gold); outline: none; }
+    a.game img { width: 112px; height: 112px; border-radius: 24px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4); }
+    a.game span { font-weight: 600; text-align: center; }
+    a.game small { color: var(--muted); }
+    #status { grid-column: 1 / -1; text-align: center; color: var(--muted); }
+    footer { margin-top: auto; padding: 40px 16px 28px; text-align: center; color: var(--muted); font-size: 0.95rem; }
+    footer a { color: var(--text); margin: 0 10px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Zanaxú Games</h1>
+    <p>Free casual games for Android. Play offline, no account needed.</p>
+  </header>
+
+  <main id="games">
+    <p id="status">Loading games…</p>
+  </main>
+
+  <footer>
+    <a href="https://play.google.com/store/apps/developer?id=Zanax%C3%BA">All our apps on Google Play</a>
+    <a href="https://yovanyjls.github.io/app-privacy-policy/zanaxu-apps/">Privacy policy</a>
+    <p>© Zanaxú</p>
+  </footer>
+
+  <script>
+    // Same list the games show in their "More games" screen (games.json in this repository).
+    fetch("games.json", { cache: "no-cache" })
+      .then((response) => response.json())
+      .then((feed) => {
+        const container = document.getElementById("games");
+        container.innerHTML = "";
+        for (const game of feed.games) {
+          const link = document.createElement("a");
+          link.className = "game";
+          link.href = "https://play.google.com/store/apps/details?id=" + encodeURIComponent(game.package);
+          const icon = document.createElement("img");
+          icon.src = game.icon;
+          icon.alt = "";
+          icon.loading = "lazy";
+          const name = document.createElement("span");
+          name.textContent = game.name;
+          const store = document.createElement("small");
+          store.textContent = "Get it on Google Play";
+          link.append(icon, name, store);
+          container.append(link);
+        }
+      })
+      .catch(() => {
+        document.getElementById("status").textContent = "Could not load the games. Please try again later.";
+      });
+  </script>
+</body>
+</html>
