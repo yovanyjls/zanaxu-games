@@ -2,104 +2,14 @@
   "version": 1,
   "games": [
     {
-      "package": "com.zanaxu.prueba01",
-      "name": "Mystic Blocks 1",
-      "icon": "icons/com.zanaxu.mysticblocks.png"
-    },
-    {
-      "package": "com.zanaxu.prueba02",
-      "name": "Galaxy Defender Extreme 2",
+      "package": "com.zanaxu.novastrike",
+      "name": "Nova Strike",
       "icon": "icons/com.zanaxu.novastrike.png"
     },
     {
-      "package": "com.zanaxu.prueba03",
-      "name": "Puzzle 3",
+      "package": "com.zanaxu.mysticblocks",
+      "name": "Mystic Blocks",
       "icon": "icons/com.zanaxu.mysticblocks.png"
-    },
-    {
-      "package": "com.zanaxu.prueba04",
-      "name": "Space Shooter Arcade Classic 4",
-      "icon": "icons/com.zanaxu.novastrike.png"
-    },
-    {
-      "package": "com.zanaxu.prueba05",
-      "name": "Blocks 5",
-      "icon": "icons/com.zanaxu.mysticblocks.png"
-    },
-    {
-      "package": "com.zanaxu.prueba06",
-      "name": "Nova Strike 6",
-      "icon": "icons/com.zanaxu.novastrike.png"
-    },
-    {
-      "package": "com.zanaxu.prueba07",
-      "name": "Mystic Blocks 7",
-      "icon": "icons/com.zanaxu.mysticblocks.png"
-    },
-    {
-      "package": "com.zanaxu.prueba08",
-      "name": "Galaxy Defender Extreme 8",
-      "icon": "icons/com.zanaxu.novastrike.png"
-    },
-    {
-      "package": "com.zanaxu.prueba09",
-      "name": "Puzzle 9",
-      "icon": "icons/com.zanaxu.mysticblocks.png"
-    },
-    {
-      "package": "com.zanaxu.prueba10",
-      "name": "Space Shooter Arcade Classic 10",
-      "icon": "icons/com.zanaxu.novastrike.png"
-    },
-    {
-      "package": "com.zanaxu.prueba11",
-      "name": "Blocks 11",
-      "icon": "icons/com.zanaxu.mysticblocks.png"
-    },
-    {
-      "package": "com.zanaxu.prueba12",
-      "name": "Nova Strike 12",
-      "icon": "icons/com.zanaxu.novastrike.png"
-    },
-    {
-      "package": "com.zanaxu.prueba13",
-      "name": "Mystic Blocks 13",
-      "icon": "icons/com.zanaxu.mysticblocks.png"
-    },
-    {
-      "package": "com.zanaxu.prueba14",
-      "name": "Galaxy Defender Extreme 14",
-      "icon": "icons/com.zanaxu.novastrike.png"
-    },
-    {
-      "package": "com.zanaxu.prueba15",
-      "name": "Puzzle 15",
-      "icon": "icons/com.zanaxu.mysticblocks.png"
-    },
-    {
-      "package": "com.zanaxu.prueba16",
-      "name": "Space Shooter Arcade Classic 16",
-      "icon": "icons/com.zanaxu.novastrike.png"
-    },
-    {
-      "package": "com.zanaxu.prueba17",
-      "name": "Blocks 17",
-      "icon": "icons/com.zanaxu.mysticblocks.png"
-    },
-    {
-      "package": "com.zanaxu.prueba18",
-      "name": "Nova Strike 18",
-      "icon": "icons/com.zanaxu.novastrike.png"
-    },
-    {
-      "package": "com.zanaxu.prueba19",
-      "name": "Mystic Blocks 19",
-      "icon": "icons/com.zanaxu.mysticblocks.png"
-    },
-    {
-      "package": "com.zanaxu.prueba20",
-      "name": "Galaxy Defender Extreme 20",
-      "icon": "icons/com.zanaxu.novastrike.png"
     }
   ]
 }
