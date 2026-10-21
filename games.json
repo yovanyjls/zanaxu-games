@@ -2,6 +2,11 @@
   "version": 1,
   "games": [
     {
+      "package": "com.zanaxu.quetzalgems",
+      "name": "Quetzal Gems",
+      "icon": "icons/com.zanaxu.quetzalgems.png"
+    },
+    {
       "package": "com.zanaxu.novastrike",
       "name": "Nova Strike",
       "icon": "icons/com.zanaxu.novastrike.png"
