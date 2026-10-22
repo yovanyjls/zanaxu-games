@@ -15,6 +15,11 @@
       "package": "com.zanaxu.mysticblocks",
       "name": "Mystic Blocks",
       "icon": "icons/com.zanaxu.mysticblocks.png"
+    },
+    {
+      "package": "com.zanaxu.tilepassport",
+      "name": "Tile Passport",
+      "icon": "icons/com.zanaxu.tilepassport.png"
     }
   ]
 }
