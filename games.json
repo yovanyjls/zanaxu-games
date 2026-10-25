@@ -20,6 +20,16 @@
       "package": "com.zanaxu.tilepassport",
       "name": "Tile Passport",
       "icon": "icons/com.zanaxu.tilepassport.png"
+    },
+    {
+      "package": "com.zanaxu.axolotlpop",
+      "name": "Axolotl Pop",
+      "icon": "icons/com.zanaxu.axolotlpop.png"
+    },
+    {
+      "package": "com.zanaxu.lumipotions",
+      "name": "Lumi Potions",
+      "icon": "icons/com.zanaxu.lumipotions.png"
     }
   ]
 }
