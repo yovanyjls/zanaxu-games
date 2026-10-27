@@ -50,6 +50,16 @@
       "package": "com.zanaxu.lumipotions",
       "name": "Lumi Potions",
       "icon": "icons/com.zanaxu.lumipotions.png"
+    },
+    {
+      "package": "com.zanaxu.zumbla",
+      "name": "Zumbla",
+      "icon": "icons/com.zanaxu.zumbla.png"
+    },
+    {
+      "package": "com.zanaxu.talunko",
+      "name": "Talunko",
+      "icon": "icons/com.zanaxu.talunko.png"
     }
   ]
 }
